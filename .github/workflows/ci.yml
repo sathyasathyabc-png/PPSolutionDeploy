@@ -25,6 +25,7 @@ jobs:
           app-id: ${{ secrets.CLIENT_ID }}
           client-secret: ${{ secrets.CLIENT_SECRET }}
           solution-name: Warranty
+          managed: true
           solution-output-file: out/Warranty.zip
 
       - name: Unpack Solution
