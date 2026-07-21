@@ -6,6 +6,10 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   build:
     runs-on: windows-latest
@@ -23,7 +27,7 @@ jobs:
           environment-url: ${{ secrets.DEV_ENV_URL }}
           tenant-id: ${{ secrets.TENANT_ID }}
           app-id: ${{ secrets.CLIENT_ID }}
-          client-secret: ${{ secrets.CLIENT_SECRET }}
+          # client-secret: ${{ secrets.CLIENT_SECRET }}
           solution-name: Warranty
           managed: true
           solution-output-file: out/Warranty.zip
