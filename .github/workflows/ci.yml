@@ -32,7 +32,7 @@ jobs:
         with:
           solution-file: out/Warranty.zip
           solution-folder: src/Warranty
-          solution-type: Unmanaged
+          solution-type: Managed
 
       - name: Upload Solution Artifact
         uses: actions/upload-artifact@v4
