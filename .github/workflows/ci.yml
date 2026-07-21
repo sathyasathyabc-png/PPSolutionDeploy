@@ -24,18 +24,18 @@ jobs:
           tenant-id: ${{ secrets.TENANT_ID }}
           app-id: ${{ secrets.CLIENT_ID }}
           client-secret: ${{ secrets.CLIENT_SECRET }}
-          solution-name: MySolution
-          solution-output-file: out/MySolution.zip
+          solution-name: Warranty
+          solution-output-file: out/Warranty.zip
 
       - name: Unpack Solution
         uses: microsoft/powerplatform-actions/unpack-solution@v1
         with:
-          solution-file: out/MySolution.zip
-          solution-folder: src/MySolution
+          solution-file: out/Warranty.zip
+          solution-folder: src/Warranty
           solution-type: Both
 
       - name: Upload Solution Artifact
         uses: actions/upload-artifact@v4
         with:
           name: solution-package
-          path: out/MySolution.zip
+          path: out/Warranty.zip
